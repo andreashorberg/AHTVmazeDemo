@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoadingView: UIView, CAAnimationDelegate {
+class ImageLoadingView: UIView, CAAnimationDelegate {
     
     let gradientLayer = CAGradientLayer()
     var gradientSet = [[CGColor]]()

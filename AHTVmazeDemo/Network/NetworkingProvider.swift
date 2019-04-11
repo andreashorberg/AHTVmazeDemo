@@ -40,11 +40,19 @@ class NetworkingProvider {
         return try? JSONSerialization.jsonObject(with: data, options: [.allowFragments]) as? [[String: Any]]
     }
     
+    var pendingRequests = 0
+    
     func requestStarted() {
-        
+        pendingRequests += 1
+        if pendingRequests == 1 {
+            LoadingView.open()
+        }
     }
     
     func requestFinished() {
-        
+        pendingRequests -= 1
+        if pendingRequests == 0 {
+            LoadingView.close()
+        }
     }
 }
