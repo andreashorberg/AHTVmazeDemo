@@ -12,4 +12,5 @@ enum NetworkingError: Error {
     case badRequest
     case failedParsing
     case failedEncoding
+    case failedDownload
 }
