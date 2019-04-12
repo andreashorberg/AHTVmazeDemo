@@ -26,6 +26,7 @@
 		EEAB2363225FB8A200445DA5 /* NetworkingServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAB2362225FB8A200445DA5 /* NetworkingServer.swift */; };
 		EEB56E14225FBB780048141C /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB56E13225FBB780048141C /* NetworkingTests.swift */; };
 		EEB56E17225FD23A0048141C /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB56E16225FD23A0048141C /* TVShow.swift */; };
+		EEB56E19225FDAA40048141C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB56E18225FDAA40048141C /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		EEB56E0D225FBB650048141C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEB56E13225FBB780048141C /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		EEB56E16225FD23A0048141C /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
+		EEB56E18225FDAA40048141C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				EEAB2353225F9DD200445DA5 /* Network */,
 				EEAB234B225F9CB500445DA5 /* Info.plist */,
 				EEAB233F225F9CB400445DA5 /* AppDelegate.swift */,
+				EEB56E18225FDAA40048141C /* LoadingView.swift */,
 				EEAAB700225FF3BD001D9F4F /* ImageLoadingView.swift */,
 				EEAB2346225F9CB500445DA5 /* Assets.xcassets */,
 				EEAB2348225F9CB500445DA5 /* LaunchScreen.storyboard */,
@@ -281,6 +284,7 @@
 				EEAB2342225F9CB400445DA5 /* SearchViewController.swift in Sources */,
 				EEAAB6FF225FF291001D9F4F /* TVShowCell.swift in Sources */,
 				EEAB2340225F9CB400445DA5 /* AppDelegate.swift in Sources */,
+				EEB56E19225FDAA40048141C /* LoadingView.swift in Sources */,
 				EEAB2355225F9E9800445DA5 /* NetworkingRouter.swift in Sources */,
 				EEAB2352225F9DCD00445DA5 /* NetworkingProvider.swift in Sources */,
 				EEAAB6FB225FE6DC001D9F4F /* SearchViewDataSource.swift in Sources */,

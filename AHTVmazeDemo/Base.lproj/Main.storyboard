@@ -43,11 +43,11 @@
                                                     <rect key="frame" x="0.0" y="322" width="414" height="57"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ptO-FB-2Oh" customClass="LoadingView" customModule="AHTVmazeDemo" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ptO-FB-2Oh" customClass="ImageLoadingView" customModule="AHTVmazeDemo" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="379"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47s-bL-ODq">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47s-bL-ODq">
                                                     <rect key="frame" x="16" y="338" width="382" height="25"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <nil key="textColor"/>
@@ -85,7 +85,7 @@
                             </collectionView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search for TV-Shows" translatesAutoresizingMaskIntoConstraints="NO" id="qFs-cj-aWq">
                                 <rect key="frame" x="0.0" y="44" width="414" height="56"/>
-                                <color key="backgroundColor" red="0.40159926019999997" green="0.67021794779999999" blue="1" alpha="0.65000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" red="0.40159926024689241" green="0.67021794784683064" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
                             </searchBar>

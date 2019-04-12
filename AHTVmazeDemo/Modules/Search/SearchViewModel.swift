@@ -40,9 +40,16 @@ struct SearchViewModel {
     }
     
     var lastRequest: ShowSearchRequest?
+    var lastCompletion: ((Result<Bool, NetworkingError>) -> ())?
     
     mutating func search(for keyword: String, completion: @escaping (Result<Bool, NetworkingError>) -> ()) {
         lastRequest = ShowSearchRequest(query: keyword)
+        lastCompletion = completion
         dataSource.performSearch(request: lastRequest!, completion: completion)
+    }
+    
+    func retrySearch() {
+        guard let lastRequest = lastRequest, let lastCompletion = lastCompletion else { return }
+        dataSource.performSearch(request: lastRequest, completion: lastCompletion)
     }
 }

@@ -19,7 +19,20 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         collectionView.dataSource = viewModel.dataSource
         collectionView.collectionViewLayout = viewModel.layout
         collectionView.delegate = self
+        setupBackground()
         setupSearchBar()
+    }
+    
+    func setupBackground() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [UIColor(red: CGFloat.random(in: 0.0...0.2), green: CGFloat.random(in: 0.8...1.0), blue: CGFloat.random(in: 0.5...0.8), alpha: 1.0).cgColor,
+                                UIColor(red: CGFloat.random(in: 0.05...0.1), green: CGFloat.random(in: 0.4...0.6), blue: CGFloat.random(in: 0.8...1.0), alpha: 1.0).cgColor
+        ]
+        gradientLayer.startPoint = CGPoint(x: CGFloat.random(in: 0.0...0.25), y: CGFloat.random(in: 0.0...0.25))
+        gradientLayer.endPoint = CGPoint(x: CGFloat.random(in: 0.75...1.0), y: CGFloat.random(in: 0.75...1.0))
+        gradientLayer.locations = [0, 1]
+        gradientLayer.frame = view.bounds
+        view.layer.insertSublayer(gradientLayer, at: 0)
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -34,8 +47,17 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
                     }
                 }
             case .failure(_):
-                
-                #warning("Show error")
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Uh oh!", message: "We were unable to perform your search, do you wish to retry?", preferredStyle: .alert)
+                    let retry = UIAlertAction(title: "Retry", style: .default, handler: { _ in
+                        self.viewModel.retrySearch()
+                    })
+                    let cancel = UIAlertAction(title: "No thanks", style: .cancel, handler: nil)
+                    alert.addAction(retry)
+                    alert.addAction(cancel)
+                    
+                    self.present(alert, animated: true, completion: nil)
+                }
             }
         }
     }
