@@ -34,10 +34,14 @@ class SearchViewDataSource: NSObject, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tvShows.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TVShowCell", for: indexPath)
         guard let tvShowCell = cell as? TVShowCell else { return cell }
+        DispatchQueue.main.async {
+            tvShowCell.loader.isHidden = false
+            tvShowCell.loader.startAnimating()
+        }
         configure(cell: tvShowCell, atIndexPath: indexPath)
         return tvShowCell
     }
@@ -47,18 +51,17 @@ class SearchViewDataSource: NSObject, UICollectionViewDataSource {
         let tvShow = tvShows[indexPath.row]
         cell.title.text = tvShow.name
         guard let image = tvShow.image.mediumURL else {
-            cell.imageLoading.isHidden = true
+            cell.updateWith(nil)
             return
         }
         downloadImage(image) { result in
             DispatchQueue.main.async {
                 switch result {
                 case .failure(_):
-                    cell.imageLoading.isHidden = true
+                    cell.updateWith(nil)
                 case .success(let image):
                     UIView.animate(withDuration: 0.5, animations: {
-                        cell.imageLoading.alpha = 0
-                        cell.image.image = image
+                        cell.updateWith(image)
                     })
                 }
             }
