@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EEAAB6FB225FE6DC001D9F4F /* SearchViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAAB6FA225FE6DC001D9F4F /* SearchViewDataSource.swift */; };
 		EEAAB6FF225FF291001D9F4F /* TVShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAAB6FE225FF291001D9F4F /* TVShowCell.swift */; };
-		EEAAB701225FF3BD001D9F4F /* ImageLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAAB700225FF3BD001D9F4F /* ImageLoadingView.swift */; };
 		EEAAB703225FFB28001D9F4F /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAAB702225FFB28001D9F4F /* SearchViewModel.swift */; };
 		EEAAB709226017E2001D9F4F /* URL+Https.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAAB708226017E2001D9F4F /* URL+Https.swift */; };
 		EEAB2340225F9CB400445DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAB233F225F9CB400445DA5 /* AppDelegate.swift */; };
@@ -42,7 +41,6 @@
 /* Begin PBXFileReference section */
 		EEAAB6FA225FE6DC001D9F4F /* SearchViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewDataSource.swift; sourceTree = "<group>"; };
 		EEAAB6FE225FF291001D9F4F /* TVShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowCell.swift; sourceTree = "<group>"; };
-		EEAAB700225FF3BD001D9F4F /* ImageLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingView.swift; sourceTree = "<group>"; };
 		EEAAB702225FFB28001D9F4F /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		EEAAB708226017E2001D9F4F /* URL+Https.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Https.swift"; sourceTree = "<group>"; };
 		EEAB233C225F9CB400445DA5 /* AHTVmazeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AHTVmazeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,7 +128,6 @@
 				EEAB234B225F9CB500445DA5 /* Info.plist */,
 				EEAB233F225F9CB400445DA5 /* AppDelegate.swift */,
 				EEB56E18225FDAA40048141C /* LoadingView.swift */,
-				EEAAB700225FF3BD001D9F4F /* ImageLoadingView.swift */,
 				EEAB2346225F9CB500445DA5 /* Assets.xcassets */,
 				EEAB2348225F9CB500445DA5 /* LaunchScreen.storyboard */,
 				EEAB2343225F9CB400445DA5 /* Main.storyboard */,
@@ -279,7 +276,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEAAB701225FF3BD001D9F4F /* ImageLoadingView.swift in Sources */,
 				EEAB235A225FABD300445DA5 /* SearchRouter.swift in Sources */,
 				EEAB2342225F9CB400445DA5 /* SearchViewController.swift in Sources */,
 				EEAAB6FF225FF291001D9F4F /* TVShowCell.swift in Sources */,
