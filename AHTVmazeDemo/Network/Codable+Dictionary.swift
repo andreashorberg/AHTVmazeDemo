@@ -22,6 +22,6 @@ extension Decodable {
     public static func from(_ dict: [String: Any]) -> Self? {
         guard let data = try? JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted) else { return nil }
         let decoder = JSONDecoder()
-        return try! decoder.decode(Self.self, from: data)
+        return try? decoder.decode(Self.self, from: data)
     }
 }

@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EEAAB6FB225FE6DC001D9F4F /* SearchViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAAB6FA225FE6DC001D9F4F /* SearchViewDataSource.swift */; };
+		EEAAB6FF225FF291001D9F4F /* TVShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAAB6FE225FF291001D9F4F /* TVShowCell.swift */; };
+		EEAAB701225FF3BD001D9F4F /* ImageLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAAB700225FF3BD001D9F4F /* ImageLoadingView.swift */; };
+		EEAAB703225FFB28001D9F4F /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAAB702225FFB28001D9F4F /* SearchViewModel.swift */; };
+		EEAAB709226017E2001D9F4F /* URL+Https.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAAB708226017E2001D9F4F /* URL+Https.swift */; };
 		EEAB2340225F9CB400445DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAB233F225F9CB400445DA5 /* AppDelegate.swift */; };
-		EEAB2342225F9CB400445DA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAB2341225F9CB400445DA5 /* ViewController.swift */; };
+		EEAB2342225F9CB400445DA5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAB2341225F9CB400445DA5 /* SearchViewController.swift */; };
 		EEAB2345225F9CB400445DA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEAB2343225F9CB400445DA5 /* Main.storyboard */; };
 		EEAB2347225F9CB500445DA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEAB2346225F9CB500445DA5 /* Assets.xcassets */; };
 		EEAB234A225F9CB500445DA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEAB2348225F9CB500445DA5 /* LaunchScreen.storyboard */; };
@@ -34,9 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EEAAB6FA225FE6DC001D9F4F /* SearchViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewDataSource.swift; sourceTree = "<group>"; };
+		EEAAB6FE225FF291001D9F4F /* TVShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowCell.swift; sourceTree = "<group>"; };
+		EEAAB700225FF3BD001D9F4F /* ImageLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingView.swift; sourceTree = "<group>"; };
+		EEAAB702225FFB28001D9F4F /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		EEAAB708226017E2001D9F4F /* URL+Https.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Https.swift"; sourceTree = "<group>"; };
 		EEAB233C225F9CB400445DA5 /* AHTVmazeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AHTVmazeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEAB233F225F9CB400445DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EEAB2341225F9CB400445DA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EEAB2341225F9CB400445DA5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		EEAB2344225F9CB400445DA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EEAB2346225F9CB500445DA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEAB2349225F9CB500445DA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +82,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EEAAB704225FFDF9001D9F4F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				EEAAB705225FFE22001D9F4F /* Search */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		EEAAB705225FFE22001D9F4F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				EEAB2341225F9CB400445DA5 /* SearchViewController.swift */,
+				EEAAB6FE225FF291001D9F4F /* TVShowCell.swift */,
+				EEAAB702225FFB28001D9F4F /* SearchViewModel.swift */,
+				EEAAB6FA225FE6DC001D9F4F /* SearchViewDataSource.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		EEAB2333225F9CB400445DA5 = {
 			isa = PBXGroup;
 			children = (
@@ -94,13 +123,14 @@
 			isa = PBXGroup;
 			children = (
 				EEB56E15225FD2270048141C /* Entities */,
+				EEAAB704225FFDF9001D9F4F /* Modules */,
+				EEAB2353225F9DD200445DA5 /* Network */,
+				EEAB234B225F9CB500445DA5 /* Info.plist */,
 				EEAB233F225F9CB400445DA5 /* AppDelegate.swift */,
-				EEAB2341225F9CB400445DA5 /* ViewController.swift */,
-				EEAB2343225F9CB400445DA5 /* Main.storyboard */,
+				EEAAB700225FF3BD001D9F4F /* ImageLoadingView.swift */,
 				EEAB2346225F9CB500445DA5 /* Assets.xcassets */,
 				EEAB2348225F9CB500445DA5 /* LaunchScreen.storyboard */,
-				EEAB234B225F9CB500445DA5 /* Info.plist */,
-				EEAB2353225F9DD200445DA5 /* Network */,
+				EEAB2343225F9CB400445DA5 /* Main.storyboard */,
 			);
 			path = AHTVmazeDemo;
 			sourceTree = "<group>";
@@ -114,6 +144,7 @@
 				EEAB2362225FB8A200445DA5 /* NetworkingServer.swift */,
 				EEAB235B225FAD6F00445DA5 /* Search */,
 				EEAB235E225FB05F00445DA5 /* Codable+Dictionary.swift */,
+				EEAAB708226017E2001D9F4F /* URL+Https.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -245,11 +276,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEAAB701225FF3BD001D9F4F /* ImageLoadingView.swift in Sources */,
 				EEAB235A225FABD300445DA5 /* SearchRouter.swift in Sources */,
-				EEAB2342225F9CB400445DA5 /* ViewController.swift in Sources */,
+				EEAB2342225F9CB400445DA5 /* SearchViewController.swift in Sources */,
+				EEAAB6FF225FF291001D9F4F /* TVShowCell.swift in Sources */,
 				EEAB2340225F9CB400445DA5 /* AppDelegate.swift in Sources */,
 				EEAB2355225F9E9800445DA5 /* NetworkingRouter.swift in Sources */,
 				EEAB2352225F9DCD00445DA5 /* NetworkingProvider.swift in Sources */,
+				EEAAB6FB225FE6DC001D9F4F /* SearchViewDataSource.swift in Sources */,
+				EEAAB703225FFB28001D9F4F /* SearchViewModel.swift in Sources */,
+				EEAAB709226017E2001D9F4F /* URL+Https.swift in Sources */,
 				EEAB235D225FADA100445DA5 /* ShowSearchRequest.swift in Sources */,
 				EEAB235F225FB05F00445DA5 /* Codable+Dictionary.swift in Sources */,
 				EEAB2357225FA8DD00445DA5 /* NetworkingError.swift in Sources */,

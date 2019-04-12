@@ -18,8 +18,7 @@ class NetworkingProvider {
     
     func send(completion: @escaping (Result<[[String: Any]], NetworkingError>) -> Void) {
         requestStarted()
-        let task = session.dataTask(with: router.urlRequest) { [weak self] data, response, error in
-            guard let self = self else { return }
+        let task = session.dataTask(with: router.urlRequest) { data, response, error in
             self.requestFinished()
             switch (data, response, error) {
             case (_, _, .some(_)):
@@ -33,7 +32,6 @@ class NetworkingProvider {
             default:
                 completion(.failure(.badRequest))
             }
-            
         }
         task.resume()
     }
